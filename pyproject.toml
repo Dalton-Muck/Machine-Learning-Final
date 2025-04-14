@@ -1,0 +1,12 @@
+[project]
+name = "machine-learning-final"
+version = "0.1.0"
+description = "A machine learning project for final assessment using classification, dimensionality reduction and clustering."
+readme = "README.md"
+requires-python = "~=3.13"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scikit-learn",
+  "umap-learn"
+]
