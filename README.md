@@ -6,7 +6,7 @@
 
 ## Group Members and Tasks
 
-- **Colin**:
+- **Colin**: Feature Selection pre-dimensionality-reduction
 
 - **Carson**: 
 
