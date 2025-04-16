@@ -16,7 +16,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description="Feature Selection using Perceptron")
 
-    parser.add_argument("--accuracy-threshold", type=float, default=0.9,
+    parser.add_argument("--accuracy-threshold", type=float, default=0.96,
                         help="Threshold for accuracy to consider features for selection")
     parser.add_argument("--capture-figures", action='store_true', default=False,
                         help="Capture the figures for each feature combination.")
