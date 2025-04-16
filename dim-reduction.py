@@ -28,10 +28,11 @@ tsneFig = TSNE(n_components = 2)
 #Fit the TSNE with the data from above
 reducedData3 = tsneFig.fit_transform(X)
 
+os.makedirs("figures/dim-reduce", exist_ok=True)
+
+plt.figure()
 #X axis is the first dimension of the fitted umap data and the y axis is the second dimension. c is used for coloring the data/labels
 umapPlot = plt.scatter(reducedData1[:, 0], reducedData1[:,1], c=y)
-
-os.makedirs("figures/dim-reduce", exist_ok=True)
 
 #Adding things like labels, a title, a grid, and a legend
 plt.title("UMAP Visualization")
@@ -39,8 +40,11 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/umap_visualization.png')
+plt.show()
+plt.close()
 
 
+plt.figure()
 #X axis is the first dimension of the fitted umap data and the y axis is the second dimension. c is used for coloring the data/labels
 pcaPlot = plt.scatter(reducedData2[:, 0], reducedData2[:,1], c=y)
 
@@ -50,8 +54,11 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/pca_visualization.png')
+plt.show()
+plt.close()
 
 
+plt.figure()
 #X axis is the first dimension of the fitted umap data and the y axis is the second dimension. c is used for coloring the data/labels
 tsnePlot = plt.scatter(reducedData3[:, 0], reducedData3[:,1], c=y)
 
@@ -61,6 +68,8 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/tsne_visualization.png')
+plt.show()
+plt.close()
 
 
 umapDF = pandas.DataFrame(reducedData1, columns = ['Dimension 1', 'Dimension 2'])
