@@ -6,11 +6,11 @@
 
 - **Colin**: Feature Selection pre-dimensionality-reduction
 
-- **Carson**:
+- **Carson**: SVM Training
 
 - **Brock**: Dimensionality-Reduction
 
-- **Dalton**: Clustering
+- **Dalton**: Perceptron Training
 
 ## Presentation Links
 
