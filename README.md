@@ -8,7 +8,7 @@
 
 - **Carson**:
 
-- **Brock**:
+- **Brock**: Dimensionality-Reduction
 
 - **Dalton**: Clustering
 
