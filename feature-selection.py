@@ -91,6 +91,7 @@ if __name__ == "__main__":
             features.append(feature2)
 
     X = X[features]
+    X = MinMaxScaler().fit_transform(X)
     df = pd.DataFrame(X, columns=features)
     df["target"] = y.values
     df.set_index("target", inplace=True, drop=True)
