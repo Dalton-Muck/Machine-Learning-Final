@@ -40,7 +40,6 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/umap_visualization.png')
-plt.show()
 plt.close()
 
 
@@ -54,7 +53,6 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/pca_visualization.png')
-plt.show()
 plt.close()
 
 
@@ -68,7 +66,6 @@ plt.xlabel("First Dimension")
 plt.ylabel("Second Dimension")
 plt.grid(True)
 plt.savefig('./figures/dim-reduce/tsne_visualization.png')
-plt.show()
 plt.close()
 
 
