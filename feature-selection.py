@@ -9,6 +9,7 @@ from sklearn.datasets import load_breast_cancer
 from sklearn.linear_model import Perceptron
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
 from tqdm import tqdm
 
 
@@ -46,6 +47,7 @@ if __name__ == "__main__":
     combinations_list = list(combinations(X.columns, 2))
     for feature1, feature2 in tqdm(combinations_list, desc="Processing combinations"):
         X_subset = X[[feature1, feature2]]
+        X_subset = MinMaxScaler().fit_transform(X_subset)
         X_train, X_test, y_train, y_test = train_test_split(
             X_subset, y, test_size=0.2, random_state=42)
 
@@ -61,9 +63,9 @@ if __name__ == "__main__":
         if args.capture_figures:
             os.makedirs("figures/selection", exist_ok=True)
             plt.figure()
-            plt.scatter(X_train[feature1], X_train[feature2],
+            plt.scatter(X_train[:, 0], X_train[:, 1],
                         c=y_train, cmap="viridis", label="Train")
-            plt.scatter(X_test[feature1], X_test[feature2], c=y_test,
+            plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test,
                         cmap="cool", marker="x", label="Test")
             plt.xlabel(feature1)
             plt.ylabel(feature2)
