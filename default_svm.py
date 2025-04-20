@@ -4,6 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.datasets import load_breast_cancer
 
+GREEN = '\033[92m'
+RESET = '\033[0m'
+
 # Load the cancer data
 data = load_breast_cancer()
 target = pd.Series(data.target)
@@ -25,4 +28,6 @@ svm_model.fit(X_train, y_train)
 y_pred = svm_model.predict(X_test)
 # Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy * 100:.2f}%')
+print(GREEN + "###########################SVM with Default Data###########################")
+print(svm_model.get_params())
+print(f'Accuracy: {accuracy * 100:.2f}%' + RESET)
