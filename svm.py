@@ -10,9 +10,9 @@ BLUE = '\033[34m'
     
 # File paths
 file_paths = [
-    # './results/umap_reduced_data.csv',
+    './results/umap_reduced_data.csv',
     './results/tsne_reduced_data.csv',
-    # './results/pca_reduced_data.csv'
+    './results/pca_reduced_data.csv'
 ]
 
 # Iterate over each file
