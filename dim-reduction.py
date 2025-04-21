@@ -68,7 +68,7 @@ plt.grid(True)
 plt.savefig('./figures/dim-reduce/tsne_visualization.png')
 plt.close()
 
-
+#Covert model data to csv files
 umapDF = pandas.DataFrame(reducedData1, columns = ['Dimension 1', 'Dimension 2'])
 umapDF['Target'] = y.values
 umapDF.to_csv('./results/umap_reduced_data.csv', index=False)
